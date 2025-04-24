@@ -515,7 +515,7 @@ services:
       <<: *shared-api-worker-env
       # Startup mode, 'worker' starts the Celery worker for processing the queue.
       MODE: worker
-      CELERY_QUEUES: app,dataset,mail,ops_trace,app_deletion
+      CELERY_QUEUES: dataset,generation,mail,ops_trace,app_deletion
       SENTRY_DSN: ${API_SENTRY_DSN:-}
       SENTRY_TRACES_SAMPLE_RATE: ${API_SENTRY_TRACES_SAMPLE_RATE:-1.0}
       SENTRY_PROFILES_SAMPLE_RATE: ${API_SENTRY_PROFILES_SAMPLE_RATE:-1.0}
